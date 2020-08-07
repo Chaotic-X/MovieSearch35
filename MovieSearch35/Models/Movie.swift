@@ -15,8 +15,8 @@ struct TopLevelObject: Codable {
 struct Movie: Codable {
   let movieTitle: String
   let movieRating: Double
-  let movieSummary: String
-  let movieReleaseDate: String
+  let movieSummary: String?
+  let movieReleaseDate: String?
   let moviePoster: String?
   let movieBackDrop: String?
   
