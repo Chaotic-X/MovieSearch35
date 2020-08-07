@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FA1C0D8224DDABDC00048B85 /* MovieSearch35.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieSearch35.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA1C0D8224DDABDC00048B85 /* Movie Search 35.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movie Search 35.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA1C0D8524DDABDC00048B85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA1C0D8724DDABDC00048B85 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FA1C0D8C24DDABDC00048B85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 		FA1C0D8324DDABDC00048B85 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FA1C0D8224DDABDC00048B85 /* MovieSearch35.app */,
+				FA1C0D8224DDABDC00048B85 /* Movie Search 35.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,7 +163,7 @@
 			);
 			name = MovieSearch35;
 			productName = MovieSearch35;
-			productReference = FA1C0D8224DDABDC00048B85 /* MovieSearch35.app */;
+			productReference = FA1C0D8224DDABDC00048B85 /* Movie Search 35.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -376,7 +376,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexlundquist.MovieSearch35;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Movie Search 35";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -394,7 +394,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexlundquist.MovieSearch35;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Movie Search 35";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

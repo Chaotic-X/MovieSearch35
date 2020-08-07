@@ -35,7 +35,7 @@ class MovieTableViewCell: UITableViewCell {
             print("Error in \(#function) : \(error.localizedDescription) \n---\n \(error)")
         } //End of Switch
         self.movieTitleLabel.text = self.movieSearch?.movieTitle
-        self.movieRatingLabel.text = "\(self.movieSearch?.movieRating ?? 0)"
+        self.movieRatingLabel.text = "Avg Rating: \(self.movieSearch?.movieRating ?? 0)"
         self.movieSummaryLabel.text = self.movieSearch?.movieSummary ?? "There was no Summary"
       } //End of Dispatch
     } //End of FetchImage

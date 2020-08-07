@@ -10,21 +10,47 @@ import UIKit
 
 class MovieDetailViewController: UIViewController {
 
+  //MARK: -Outlets
+  @IBOutlet weak var movieBackDropImage: UIImageView!
+  @IBOutlet weak var movieTitleLabel: UILabel!
+  @IBOutlet weak var movieReleaseDateLabel: UILabel!
+  @IBOutlet weak var movieRatingLabel: UILabel!
+  @IBOutlet weak var movieSummary: UILabel!
+  
+  
+  var receivedMovie: Movie?
+  
     override func viewDidLoad() {
         super.viewDidLoad()
+      updateView()
 
-        // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+  
+  //MARK: -Setup UP View
+  func updateView() {
+    guard let receivedMovie = receivedMovie,
+      let backDropPath = receivedMovie.movieBackDrop else { return }
+    MovieController.fetchImage(for: backDropPath) { (results) in
+      DispatchQueue.main.async {
+        switch results {
+          case .success(let backDrop):
+            self.movieBackDropImage.image = backDrop
+          case .failure(let error):
+           print("Error in \(#function) : \(error.localizedDescription) \n---\n \(error)")
+        } //End Switch
+        self.movieTitleLabel.text = receivedMovie.movieTitle
+        self.movieReleaseDateLabel.text = receivedMovie.movieReleaseDate
+        self.movieRatingLabel.text = "Average Rating: \(receivedMovie.movieRating)"
+        self.movieSummary.text = receivedMovie.movieSummary
+        self.navigationController?.title = receivedMovie.movieTitle
+      }
     }
-    */
-
+  }
+  
 }
+//let movieTitle: String
+//let movieRating: Double
+//let movieSummary: String
+//let movieReleaseDate: String
+//let moviePoster: String?
+//let movieBackDrop: String?

@@ -34,15 +34,19 @@ class MovieListTableViewController: UITableViewController {
     cell.movieSearch = movies
     return cell
   } //End of Cell
-//  // MARK: - Navigation
-//  // In a storyboard-based application, you will often want to do a little preparation before navigation
-//  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//    //Setting Custom Back Button Text
-//    navigationItem.backBarButtonItem = UIBarButtonItem(
-//      title: "Back", style: .plain, target: nil, action: nil)
-//    // Get the new view controller using segue.destination.
-//    // Pass the selected object to the new view controller.
-//  } //End of Prepare for Segue
+  // MARK: - Navigation
+  // In a storyboard-based application, you will often want to do a little preparation before navigation
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //Setting Custom Back Button Text
+    navigationItem.backBarButtonItem = UIBarButtonItem(
+      title: "Back", style: .plain, target: nil, action: nil)
+    if segue.identifier == "toDetailVC" {
+      guard let indexPath = tableView.indexPathForSelectedRow,
+        let destinationVC = segue.destination as? MovieDetailViewController else { return }
+      let movieToSend = movies[indexPath.row]
+      destinationVC.receivedMovie = movieToSend
+    }
+  } //End of Prepare for Segue
   
 } //End of MovieListTableViewControlelr
 
